@@ -1,4 +1,5 @@
 <?php
+//Sorting Text Date Newest Rating
 function sortByTextNew($a, $b) {
       
     if($b['reviewText']>$a['reviewText'])
@@ -18,6 +19,7 @@ function sortByTextNew($a, $b) {
     }
  
 }
+//Sorting Text Rating Date Oldest
 function sortByTextOld($a, $b) {
       
     if($b['reviewText']>$a['reviewText'])
@@ -37,7 +39,7 @@ function sortByTextOld($a, $b) {
     }
  
 }
-//tuka
+//Lowest Rating with Text and Newest date
 function sortingByTextDateLowestRatingNewest($a, $b) {
       
         if(strlen($a['reviewText'])<strlen($b['reviewText']))
@@ -57,6 +59,7 @@ function sortingByTextDateLowestRatingNewest($a, $b) {
         }
     
 }
+//SOrting with text lowest rating oldest date
 function sortByTextDateLowestRating($a, $b) {
       
     if(strlen($a['reviewText'])<strlen($b['reviewText']))
@@ -90,6 +93,7 @@ function sortByRatingDateNew($a, $b) {
         return  $a['reviewCreatedOnDate']>$b['reviewCreatedOnDate'];
     }
  }
+ //Rating date old
  function sortByRatingDateOld($a, $b) {
     
     if ( $b['rating']>$a['rating'] )
